@@ -1,23 +1,4 @@
-  body {
-  background-color: #bebebe;
-  font: 400 1em/1.38 Montserrat;
-  color: #ffffff;
-}
 
-.info_bg p {
-  margin-bottom: -.2em;
-}
-
-.climate_bg {
-  position: absolute;
-  top: 0;
-  left: 235px;
-  z-index: 6;
-  width: 163px;
-  height: 149px;
-  border-top-right-radius: 10px;
-  background-color: rgb(255, 255, 255);
-}
 
 .weathericon {
   display: block;
