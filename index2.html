@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>acmDigitalSignage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="simpleweather/jquery.simpleWeather.js"></script>
+  <link rel="stylesheet" type="text/css" href="acmCSS.css" />
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-sm-2" style="background-color:yellow;">
+		This will be the logo
+	</div>
+	<div class="col-sm-10">
+		<div id="weather"></div>
+		<script>
+		// v3.1.0
+		//Docs at http://simpleweatherjs.com
+		$(document).ready(function() {
+		  $.simpleWeather({
+			location: 'Minneapolis, MN',
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+			  html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+				$("#weather").html(html);
+			},
+			error: function(error) {
+			  $("#weather").html('<p>'+error+'</p>');
+			}
+		  });
+		});
+		</script>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<!--<li data-target="#myCarousel" data-slide-to="3"></li> -->
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="img11.jpg" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="img12.jpg" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="img13.jpg" alt="Flower">
+			</div>
+
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+
+    </div>
+    <div class="col-sm-3" >
+		<div id="gCal">
+			<iframe src="https://calendar.google.com/calendar/embed?title=ACM%20Events&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=acmumn%40gmail.com&amp;color=%23333333&amp;ctz=America%2FChicago" style="border-width:0" width="350" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
