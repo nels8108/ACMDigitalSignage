@@ -1,0 +1,165 @@
+html {
+  width: 100%;
+  height: 100%;
+  background: #1192d3 url(http://www.donolsonphotography.com/Skylines/Skylines/i-qz8PVXf/0/X2/35W%20Mpls%20SL-X2.jpg) no-repeat bottom right;
+  background-size: cover;
+}
+
+body {
+  padding: 45px 0;
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#weather {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.weathericon {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 1.226993865%;
+  z-index: 5;
+  width: 160px;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.dropicon {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: -3.9110429448%;
+  z-index: 3;
+  width: 41px;
+  height: auto;
+  overflow: hidden;
+}
+
+.not-available, .failed {
+  position: absolute;
+  top: 464px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 248px;
+  min-height: 24px;
+  margin: 0 auto;
+  font: 0.625em/1.38 'Trebuchet MS';
+  color: rgb(0, 0, 0);
+}
+
+.humidity {
+  position: absolute;
+  top: 19px;
+  left: 29px;
+  z-index: 2;
+  width: 46px;
+  min-height: 29px;
+  font-size: 1em;
+  line-height: 1.38;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.location {
+  position: absolute;
+  top: 128px;
+  left: 63px;
+  z-index: 8;
+  width: 108px;
+  min-height: 59px;
+  font-size: 1.313em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.temperature {
+  position: absolute;
+  top: 38px;
+  left: 72px;
+  z-index: 7;
+  width: 109px;
+  min-height: 28px;
+  font-size: 4.25em;
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+.windicon {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 43.1173312883%;
+  z-index: 1;
+  width: 50px;
+  height: auto;
+  overflow: hidden;
+}
+
+.windspeed {
+  position: absolute;
+  top: 9px;
+  left: 109px;
+  width: 50px;
+  min-height: 29px;
+  font-size: 1em;
+  line-height: 1.38;
+  text-align: center;
+  color: #ffffff;
+}
+
+.windspeed p {
+  margin-bottom: -.2em;
+}*/
