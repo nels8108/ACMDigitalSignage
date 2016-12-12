@@ -10,37 +10,81 @@
   <script src="simpleweather/jquery.simpleWeather.js"></script>
   <link rel="stylesheet" type="text/css" href="acmCSS.css" />
 </head>
-<body>
+<body >
 
 <div class="container-fluid">
   <div class="row">
-	<div class="col-sm-2" style="background-color:yellow;">
-		This will be the logo
+	<div class="col-sm-2" id="ACMlogo" >
+		<img src="acm-logo.png" class="img-responsive" alt="Cinque Terre" width="400" height="200">
 	</div>
-	<div class="col-sm-10">
-		<div id="weather"></div>
+	<div class="col-sm-10" >
+		<div id="weatherBox"> 
+		<span id="demo"></span>
+		<p id="weather"></p></div>
 		<script>
 		// v3.1.0
 		//Docs at http://simpleweatherjs.com
-		$(document).ready(function() {
-		  $.simpleWeather({
-			location: 'Minneapolis, MN',
-			woeid: '',
-			unit: 'f',
-			success: function(weather) {
-			  html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+		function startTime(){
+				var d = new Date();
+				var weekday = new Array(7);
+				weekday[0]=  "Sunday";
+				weekday[1] = "Monday";
+				weekday[2] = "Tuesday";
+				weekday[3] = "Wednesday";
+				weekday[4] = "Thursday";
+				weekday[5] = "Friday";
+				weekday[6] = "Saturday";
+				var n = weekday[d.getDay()];
+				var month = new Array();
+				month[0] = "January";
+				month[1] = "February";
+				month[2] = "March";
+				month[3] = "April";
+				month[4] = "May";
+				month[5] = "June";
+				month[6] = "July";
+				month[7] = "August";
+				month[8] = "September";
+				month[9] = "October";
+				month[10] = "November";
+				month[11] = "December";
+				var m = month[d.getMonth()];
+				
+				html = n+', ' +m+ ' ' +d.toLocaleTimeString();
+				$("#demo").html(html);
+				
+		}
+		function getWeather(){
+		var d = new Date();
+		$.simpleWeather({
+				location: 'Minneapolis, MN',
+				woeid: '',
+				unit: 'f',
+				success: function(weather) {
+				html = '<h2>Now: <i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+' Tomorrow: <i class="icon-'+weather.forecast[1].code+'"></i> '+weather.forecast[1].high+'&deg;'+weather.units.temp+ ' '+weather.forecast[2].day+ '<i class="icon-'+weather.forecast[1].code+'"></i> '+weather.forecast[1].high+'&deg;'+weather.units.temp+' LAST UPDATED: '  + weather.updated+'</h2>';
 				$("#weather").html(html);
-			},
-			error: function(error) {
-			  $("#weather").html('<p>'+error+'</p>');
-			}
-		  });
+				},
+				error: function(error) {
+				$("#weather").html('<h2>'+error+'</h2>');
+				}
+
+				});
+		}
+		$(document).ready(function() {
+				getWeather();
+				var t = setInterval(startTime, 5000);
+				var r = setInterval(getWeather,3600000 );
 		});
+				
+			
+			
+		
+		
 		</script>
 	</div>
   </div>
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-9" >
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -78,7 +122,7 @@
 		</div>
 
     </div>
-    <div class="col-sm-3" >
+    <div class="col-sm-3"  >	
 		<div id="gCal">
 			<iframe src="https://calendar.google.com/calendar/embed?title=ACM%20Events&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=acmumn%40gmail.com&amp;color=%23333333&amp;ctz=America%2FChicago" style="border-width:0" width="350" height="600" frameborder="0" scrolling="no"></iframe>
 		</div>
