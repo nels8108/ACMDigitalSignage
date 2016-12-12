@@ -11,17 +11,21 @@ body{
     font-style: normal;
 }
 
-#weather {
-  width: 500px;
-  margin: 0px auto;
-  text-align: center;
+#weatherBox { /*this is the Div for the weather element */
+  /*width: 500px;*/
+  
+  text-align: left;
   text-transform: uppercase;
+  border-style: solid;
+  border-color: #fed136;
+  
+  margin: 40px 25px 40px 0px;
 }
 
-i {
+i { /* This is the weather icon */
   color: #fff;
   font-family: weather;
-  font-size: 20px;
+  font-size: 34px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
@@ -77,32 +81,50 @@ i {
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
 
-#weather h2 {
-  margin: 0 0 8px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: normal;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+#demo{
+	margin: 0 0 0 0px;
+	padding: 0 0 0 0px;
+	color:black;
+	font-size: 30px;
+	font-weight: normal;
+	background-color: #fed136;
+	display: block;
 }
-
+#weather p, h2 {
+  margin:0 0 0 0px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+  display:inline;
+  /*text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);*/
+}
+p{
+	margin:0px;
+}
 #weather ul {
-  margin: 0;
+  margin: 0px;
   padding: 0;
 }
 
-#weather li {
+/*#weather li {
   background: #fff;
   background: rgba(255,255,255,0.90);
   padding: 20px;
   display: inline-block;
   border-radius: 5px;
-}
+}*/
 
-#weather .currently {
+/*#weather .currently {
   margin: 0 20px;
-}
+}*/
 
 #myCarousel {
 	border-style: solid;
 	border-color: #fed136;
 }
+
+#ACMlogo{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
