@@ -13,7 +13,14 @@
 </head>
 <body >
 
-<div class="container-fluid">
+<video playsinline autoplay muted loop poster="placeholder.jpg" id="backgroundvid">
+		<!--<source src="video.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+		<source src="video.ogv" type='video/ogg; codecs="theora, vorbis"'>-->
+		<source src="video/mov_bbb.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+		<p>Fallback content to cover incompatibility issues</p>
+	</video>
+	
+<div id="Objects" class="container-fluid">
   <div class="row">
 	<div class="col-sm-2" id="ACMlogo" >
 		<img src="acm-logo.png" class="img-responsive" alt="Cinque Terre" width="400" height="200">
@@ -55,6 +62,13 @@
 				$("#demo").html(html);
 				
 		}
+		function hideAll(){
+			$( "#Objects" ).hide("fast");
+			var sA = setInterval(showAll,5000);
+		}
+		function showAll(){
+			$( "#Objects" ).show("fast");
+		}
 		function getWeather(){
 		var d = new Date();
 		$.simpleWeather({
@@ -75,6 +89,8 @@
 				getWeather();
 				var t = setInterval(startTime, 5000);
 				var r = setInterval(getWeather,3600000 );
+				var s = setInterval(hideAll, 10000);
+				
 		});
 				
 			
